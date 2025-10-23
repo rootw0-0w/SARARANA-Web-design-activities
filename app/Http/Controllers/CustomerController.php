@@ -37,7 +37,7 @@ class CustomerController extends Controller
             'last_name' => 'required|min:50',
             'date_of_birth' => 'nullable|date',
             'address' => 'nullable',
-            'phone_number' => 'nullablr|max:20'
+            'phone_number' => 'nullable|max:20',
         ]);
 
         Customer::create($validatedData);

@@ -9,8 +9,7 @@ Route::get('/', function () {
 
 Route::get('/customers', [CustomerController::class, 'index'])->name('customers.index');
 Route::get(
-    '/customers.create',
+    '/customers/create',
     [CustomerController::class, 'create']
 )->name('customers.create');
-
 Route::post('/customers', [CustomerController::class, 'store'])->name('customers.store');

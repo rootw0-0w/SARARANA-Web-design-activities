@@ -1,5 +1,8 @@
 <div>
     <!-- Be present above all else. - Naval Ravikant -->
+    <div>
+        <a href={{ route('customers.create') }}>Create New Customer</a>
+    </div>
     @foreach($customers as $customer)
     <div> 
         <h2>{{ $customer->username }}</h2>
