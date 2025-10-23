@@ -10,6 +10,13 @@
         <p>Address: {{ $customer->address }}</p>
         <p>Created At: {{ $customer->created_at}}</p>
     </div>
+    <form action={{ route('customers.destroy', $customer->id) }} 
+        method="POST" 
+        onsubmit="return confirm('Are you sure you want to delete this customer?')">
+        @csrf
+        @method('DELETE')
+        <button type="submit">Delete Customer</button>
+    </form>
      <a href={{ route('customers.edit', $customer->id) }}>Edit Customer</a>
      <a href={{ route('customers.index') }}>Back to Customer List</a> 
 </div>
