@@ -5,7 +5,7 @@
     </div>
     @foreach($customers as $customer)
     <div> 
-        <h2>{{ $customer->username }}</h2>
+        <h2><a href={{ route('customers.show', $customer->id)}}>{{ $customer->username }}<a></h2>
         <p>Email: {{ $customer->email }}</p>
         <p>Phone: {{ $customer->phone_number }}</p>
     </div>

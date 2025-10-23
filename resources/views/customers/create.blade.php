@@ -1,5 +1,5 @@
 <div>
-  <form action ="/customers" method="POST">
+  <form action ={{route('customers.store')}} method="POST">
     @csrf
     <label for="username">Username:</label>
     <input type="text" id="username" name="username" required>
