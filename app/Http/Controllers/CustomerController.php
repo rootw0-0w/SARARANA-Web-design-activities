@@ -71,8 +71,8 @@ class CustomerController extends Controller
     public function update(Request $request, string $id)
     {
         $validatedData = $request->validate([
-            'username' => 'required|max:50|unique:customers,username' . $id,
-            'email' => 'required|email|unique:customers,email' . $id,
+            'username' => 'required|max:50|unique:customers,username,' . $id,
+            'email' => 'required|email|unique:customers,email,' . $id,
             'password_hash' => 'required|min:8',
             'first_name' => 'required|max:50',
             'last_name' => 'required|max:50',
